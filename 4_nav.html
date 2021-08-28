@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container p-4">
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link disabled">Link 3</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 4</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+
+      <hr>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr />
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr />
+      <ul class="nav justify-content-between">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr />
+      
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr />
+      <ul class="mb-5 nav nav-tabs ">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr>
+      <ul class="mb-5 nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr>
+      <ul class="mb-5 nav nav-tabs nav-justified">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr>
+      <ul class="mb-5 nav nav-pills nav-justified">
+        <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Link 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 4</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Link 5</a></li>
+      </ul>
+      <hr />
+      <h3>Toggleable / Dynamic Tabs</h3>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+        </li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content border border-top-0 py-3">
+        <div class="container tab-pane active" id="home">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nam
+          facere, repellat quas nihil voluptas. Qui reprehenderit omnis atque
+          asperiores et quod, vero ea officiis quaerat magni velit, corporis
+          obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Obcaecati nam facere, repellat quas nihil voluptas. Qui reprehenderit
+          omnis atque asperiores et quod, vero ea officiis quaerat magni velit,
+          corporis obcaecati.
+        </div>
+        <div class="container tab-pane fade" id="menu1">
+          <img src="images/img_avatar1.png" alt="" class="w-25">
+        </div>
+        <div class="container tab-pane fade" id="menu2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nam
+          facere, repellat quas nihil voluptas. Qui reprehenderit omnis atque
+          asperiores et quod, vero ea officiis quaerat magni velit, corporis
+          obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Obcaecati nam facere, repellat quas nihil voluptas. Qui reprehenderit
+          omnis atque asperiores et quod, vero ea officiis quaerat magni velit,
+          corporis obcaecati.
+        </div>
+      </div>
+      <hr />
+      <h3>Toggleable / Dynamic Pills</h3>
+      <!-- Nav pills -->
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="#home1">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#menu11">Menu 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#menu21">Menu 2</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="container tab-pane active" id="home1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nam
+          facere, repellat quas nihil voluptas. Qui reprehenderit omnis atque
+          asperiores et quod, vero ea officiis quaerat magni velit, corporis
+          obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Obcaecati nam facere, repellat quas nihil voluptas. Qui reprehenderit
+          omnis atque asperiores et quod, vero ea officiis quaerat magni velit,
+          corporis obcaecati.
+        </div>
+        <div class="container tab-pane fade" id="menu11">
+          <img src="images/img_avatar1.png" alt="" class="w-25">
+        </div>
+        <div class="container tab-pane fade" id="menu21">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nam
+          facere, repellat quas nihil voluptas. Qui reprehenderit omnis atque
+          asperiores et quod, vero ea officiis quaerat magni velit, corporis
+          obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Obcaecati nam facere, repellat quas nihil voluptas. Qui reprehenderit
+          omnis atque asperiores et quod, vero ea officiis quaerat magni velit,
+          corporis obcaecati.
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="lib/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
