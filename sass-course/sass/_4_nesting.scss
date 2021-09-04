@@ -1,0 +1,111 @@
+/******* Nesting **********/
+$nav-height: 40px;
+
+/*
+  decendant selector
+  selector1{
+    selector2{
+                        
+    }
+  }
+  
+  child selector
+  selector1{
+    > selector2{
+                        
+    }
+  }
+
+  sibling selector
+  selector1{
+    + selector2{
+                        
+    }
+  }
+  sibling selector
+  selector1{
+    ~ selector2{
+                        
+    }
+  }
+
+  parent selector &
+
+  selector1{
+    & + &{
+                        
+    }
+    &:hover{
+    }
+  }
+*/
+
+.nav {
+  padding: 8px;
+  height: $nav-height;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    // li {
+    //   float: left;
+    // }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $dark;
+      background-color: $light;
+      line-height: $nav-height;
+
+      &:hover{
+        background-color: yellowgreen;
+      }
+    }
+  }
+
+  > ul {
+    > li {
+      float: left;
+    }
+  }
+}
+
+h2 {
+  + p {
+    border-top: 1px solid gray;
+  }
+}
+
+p {
+  ~ span {
+    opacity: 0.8;
+  }
+
+  ~ a {
+    color: gainsboro;
+  }
+}
+
+/************/
+p {
+  ~ {
+    span {
+      opacity: 0.8;
+    }
+
+    a {
+      color: gainsboro;
+    }
+  }
+}
+
+.card-link{  
+  background-color: #fff;
+  
+  & + &{
+    margin-left: 10px;
+  }
+}

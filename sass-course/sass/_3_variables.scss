@@ -1,0 +1,31 @@
+/***** Variables *****/
+$base-font-size: 18px;
+$base-font-family: Arial, Helvetica, sans-serif;
+$red: #ca1d1d;
+$blue: #0000ff;
+$dark: #353535;
+$light: #f1f1f1;
+
+
+$primary: $dark;
+
+body{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+h1{
+  font-size: $base-font-size * 4;
+}
+h2{ 
+  font-size: $base-font-size * 3.5;
+}
+h3{ 
+  font-size: $base-font-size * 3;
+}
+
+.test-blue{
+  color: $blue;
+}
+.test-primary{
+  color: $primary;
+}
