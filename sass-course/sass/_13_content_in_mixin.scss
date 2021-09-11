@@ -1,0 +1,11 @@
+@mixin my-mixin-2($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+  @content;
+}
+
+.my-class-2{
+  @include my-mixin-2($color: red, $bg-color: green){
+    padding: 20px;
+  }
+}

@@ -1,0 +1,62 @@
+@use "sass:math";
+/********** Loops ************/
+/********** for - to ************/
+@for $i from 1 to 12 {
+  .class-to-#{$i}{
+    padding: $i * 2 + px;
+  }
+}
+/********** for through ************/
+@for $i from 1 through 12 {
+  .class-through-#{$i}{
+    padding: $i * 2 + px;
+  }
+}
+/**************/
+$col-count: 12;
+
+@for $i from 1 through $col-count {
+  .col-#{$i}{
+    // width: math.div(100%, $col-count) * $i;
+    width: (100% / $col-count) * $i;
+  }
+}
+
+/************ while *********/
+/// Divides `$value` by `$ratio` until it's below `$base`.
+@function scale-below($value, $base, $ratio: 1.618) {
+  @while $value > $base {
+    // $value: math.div($value, $ratio);
+    $value: $value / $ratio;
+    @debug $value;
+  }
+  @return $value;
+}
+
+$normal-font-size: 16px;
+sup {
+  font-size: scale-below(20px, 16px, 1.0002);
+}
+
+/******** @each **********/
+// $sizes: [40px 50px 80px 100px];
+// $sizes: 40px, 50px, 80px, 100px, 20px;
+$sizes: 40px 50px 80px 100px 10px 60px;
+
+// @each $variable in $list { .... }
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+// $medias: sm md lg xl;
+// @each $media in $medias {
+//   @for $i from 1 through $col-count {
+//     .col-#{$media}-#{$i}{
+//       width: (100% / $col-count) * $i;
+//     }
+//   }
+// }

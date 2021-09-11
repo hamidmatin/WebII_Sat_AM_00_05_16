@@ -1,0 +1,62 @@
+/*********** Functions *************/
+@function get_color($color, $amount: 40%, $to-dark: false){
+  $new-color: #000;
+  
+  @if( $to-dark ){
+    $new-color : darken($color: $color, $amount: $amount)
+  }
+  @else{
+    $new-color : lighten($color: $color, $amount: $amount)
+  }
+
+  @return $new-color;
+}
+
+@mixin btn-2($color, $background-color, $to-dark: false){
+  background-color: $background-color;
+  color: $color;
+
+  $border-color: get_color($background-color, 30%, $to-dark);
+  
+  border: 2px solid $border-color; 
+  
+
+  &:hover{
+    $border-color: get_color($background-color, 40%, $to-dark);
+    background-color: get_color($color: $background-color, $amount: 10%, $to-dark: $to-dark);
+    border: 2px solid $border-color;
+  }
+}
+
+.btn-primary-2{
+  @include btn-2($color:red, $background-color:pink, $to-dark: true);
+  // padding: 20px 30px 40px 50px;
+  
+}
+
+.btn-dark-2{
+  @include btn-2($color: white, $background-color: #555, $to-dark: false)
+}
+
+.my-class{
+  $color: rgb(53, 172, 29);
+  background-color: get_color($color: $color, $amount: 20%, $to-dark: true);
+  color: get_color($color: $color, $amount: 30%, $to-dark: false);
+  border:2px solid get_color($color: $color, $amount: 30%, $to-dark: true);
+}
+
+/********************/
+@function invert($color, $amount: 100%) {
+  $hue-color : hue($color);
+  $inverse: change-color($color, $hue: $hue-color + 180);
+  $mixed-color : mix($inverse, $color, $amount);
+  @return $mixed-color;
+}
+
+.link{ 
+  $color: blue;
+  background-color: $color;
+  &:hover{
+    background-color: invert($color: $color, $amount: 100%);
+  }
+}

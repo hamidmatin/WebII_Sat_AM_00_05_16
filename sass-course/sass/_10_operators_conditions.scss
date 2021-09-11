@@ -1,0 +1,65 @@
+@debug 10s + 15s;     // 25s
+@debug 10s + 1500ms;  // 11.5s
+@debug 100ms + .5s;   // 600ms
+
+@debug 1in - 10px;    // 0.8958333333in
+@debug 200px - 1in;   // 104px
+@debug 5px * 3px;     // 15px*px
+@debug 5px * 3;       // 15px
+@debug 5px % 3px;     // 2px باقیمانده
+@debug 1in % 9px;     // 0.0625in
+
+@debug 100px + 50;    // 150px
+@debug 4s * 10;       // 40s
+
+@debug +(5s + 7s);      // 12s
+@debug -(50px + 30px);  // -80px
+@debug -(10px - 15px);  // 5px
+
+// Equality
+@debug 1px == 1px;  // true
+@debug 1px != 1em;  // true
+@debug 1 != 1px;    // true
+@debug 96px == 1in; // true
+
+@debug "Helvetica" == Helvetica; // true
+@debug "Helvetica" != "Arial"; // true
+
+@debug hsl(34, 35%, 92%) == #f2ece4; // true
+@debug rgba(179, 115, 153, 0.5) != rgba(179, 115, 153, 0.8); // true
+
+@debug (5px 7px 10px) == (5px 7px 10px); // true
+@debug (5px 7px 10px) != (10px 14px 20px); // true
+@debug (5px 7px 10px) != (5px, 7px, 10px); // true
+@debug (5px 7px 10px) != [5px 7px 10px]; // true
+
+$theme: ("venus": #998099, "nebula": #d2e1dd);
+@debug $theme == ("venus": #998099, "nebula": #d2e1dd); // true
+@debug $theme != ("venus": #998099, "iron": #dadbdf); // true
+
+@debug true == true; // true
+@debug true != false; // true
+@debug null != false; // true
+
+@debug get-function("rgba") == get-function("rgba"); // true
+@debug get-function("rgba") != get-function("hsla"); // true
+
+// Relational Operators
+@debug 100 > 50; // true
+@debug 10px < 17px; // true
+@debug 96px >= 1in; // true
+@debug 1000ms <= 1s; // true
+
+///////////////////
+$circle: false;
+@if $circle {
+  @debug 'circle'
+}
+
+$size: 200px;
+
+@if $size > 200px{
+  @debug 'Larger than 200px';
+} @else{
+  @debug 'small or equal 200px'
+}

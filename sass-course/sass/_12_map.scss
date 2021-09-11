@@ -1,0 +1,72 @@
+/********* Map **********/
+// map : (key: value, key: value, ......)
+
+$icons: ("eye": "\f112", "start": "\f12e", "stop": "\f12f");
+
+@each $name, $glyph in $icons {
+  .icon-#{$name}:before {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $glyph; 
+  }
+}
+
+// @media screen and (max-width: 576px) {
+//   .col-sm-1{...}
+// }
+// @media screen and (max-width: 768px) {
+//   .col-md-1{...}
+// }
+
+$medias-map: (sm:576px, md:768px, lg:992px, xl:1200px, xxl: 1400px);
+$col-count: 6;
+
+@each $media, $size in $medias-map {
+  @media screen and (min-width: $size){
+    @for $i from 1 through $col-count {
+      .col-#{$media}-#{$i}{ 
+        width: (100% / $col-count) * $i;
+      }
+    }
+  }
+}
+
+$text-aligns: left right center justify;
+
+@each $media, $size in $medias-map {
+  @media screen and (min-width: $size){
+    @each $align in $text-aligns {
+      .text-#{$media}-#{$align}{
+        text-align: $align;
+      }
+    }
+  }
+}
+
+@mixin btn-3 ($name, $color){
+  .btn-#{$name}{
+    background-color: $color;
+  }
+}
+
+$colors-map: ("primary": $primary, "secondary": $secondary, "light": $light, "dark": $dark);
+@each $color-name, $color-val in $colors-map {
+  @include alert($color-name, $color-val);
+}
+@each $color-name, $color-val in $colors-map {
+  @include btn-3($color-name, $color-val);
+}
+
+/******** Fontawsome Sample *********/
+$fa-css-prefix:       fa !default;
+$fa-icons-map:(
+  "500px": "\f26e", 
+  "address-book": "\f2b9", 
+  "address-book-o": "\f2ba", 
+  "address-card": "\f2bb", 
+  );
+@each $fa-icon-name, $fa-icon-value in $fa-icons-map {
+  .#{$fa-css-prefix}-#{$fa-icon-name}::before{
+    content: $fa-icon-value;
+  }
+}
