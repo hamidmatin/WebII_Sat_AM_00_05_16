@@ -1,0 +1,26 @@
+/********* List **********/
+@list : range(10px, 30px, 5);
+
+//each(@list, {@value, @index})
+
+each(@list,{
+  .icon-@{index}{
+    width: @value;
+  }
+})
+
+//each(@map, {@value, @key, @index})
+
+@set: {
+  one: blue;
+  two: green;
+  three: red;
+}
+
+each(@set, {
+  .@{key}-@{index}{
+    color: @value;
+  }
+})
+
+

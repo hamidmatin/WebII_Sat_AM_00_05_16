@@ -1,0 +1,72 @@
+/******* Mixins ***********/
+.a{
+  color: red;
+}
+#my-id{
+  background-color: #ccc;
+}
+
+.my-mixin(){
+  height: 2em;
+}
+
+.my-mixin-2(@width){
+  width: @width;  
+}
+
+.my-hover-mixin(@color:green) {
+  &:hover{
+    border-bottom: 1px solid @color;
+  }
+}
+
+.use-mixin{
+  font-size: 18px;
+  .a();
+  #my-id();
+  .my-mixin();
+  .my-mixin-2(100px);
+  .my-hover-mixin(#555);
+}
+
+.my-class{
+  padding: 10px;
+  .my-hover-mixin();
+}
+
+@with-height: true;
+
+.conditional-mixin (@height) when (@with-height = true){
+  height: @height;
+}
+
+.my-class-2{
+  margin-top: 20px;
+  .conditional-mixin(300px);
+}
+
+@has-rounded: false;
+.rounded-corner(@radius) when (@has-rounded){
+  border-radius: @radius;
+}
+
+.btn{
+  padding: 20px;
+  display: inline-block;
+  .rounded-corner(4px)
+}
+
+.test-important(){
+  color: red;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.without-important{
+  .test-important();
+}
+
+.with-imortant{
+  .test-important() !important;
+}

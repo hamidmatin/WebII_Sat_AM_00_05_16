@@ -1,0 +1,174 @@
+/************ Nesting ***********/
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+nav ul > li {
+  margin-right: 5px;
+}
+nav ul a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  background-color: #ccc;
+}
+nav ul a:hover {
+  background-color: black;
+  color: #ccc;
+}
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+/******** dynamic_name ******/
+.btn-primary {
+  color: #ef55f1;
+}
+.alert-primary {
+  background-color: #ef55f1;
+}
+.alert-primary::after {
+  content: "/images";
+}
+.icon {
+  background-image: url("/pics/bgdesert.jpg");
+}
+.section .element {
+  color: green;
+}
+.btn {
+  padding: 20px;
+  color: dodgerblue;
+  border: 2px solid dodgerblue;
+}
+/******* Mixins ***********/
+.a {
+  color: red;
+}
+#my-id {
+  background-color: #ccc;
+}
+.use-mixin {
+  font-size: 18px;
+  color: red;
+  background-color: #ccc;
+  height: 2em;
+  width: 100px;
+}
+.use-mixin:hover {
+  border-bottom: 1px solid #555;
+}
+.my-class {
+  padding: 10px;
+}
+.my-class:hover {
+  border-bottom: 1px solid green;
+}
+.my-class-2 {
+  margin-top: 20px;
+  height: 300px;
+}
+.btn {
+  padding: 20px;
+  display: inline-block;
+}
+.without-important {
+  color: red;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+}
+.with-imortant {
+  color: red !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+}
+/******* Extends ********/
+.inline,
+nav ul,
+.calss-2 {
+  color: red;
+}
+nav ul {
+  background: blue;
+}
+.calss-1,
+.calss-2 {
+  padding: 20px;
+}
+.calss-2 {
+  background-color: green;
+}
+.bucket,
+.extend-all {
+  background-color: lightblue;
+}
+.bucket tr,
+.some-class,
+.extend-all tr {
+  color: blue;
+}
+.some-class {
+  margin-top: 20px;
+}
+.extend-all {
+  margin-bottom: 20px;
+}
+/******** Map **********/
+.navbar {
+  display: block;
+}
+@media (min-width: 768px) {
+  .navbar {
+    display: inline-block;
+  }
+}
+@media (min-width: 320px) {
+  .navbar {
+    display: none !important;
+  }
+}
+/********* List **********/
+.icon-1 {
+  width: 10px;
+}
+.icon-2 {
+  width: 15px;
+}
+.icon-3 {
+  width: 20px;
+}
+.icon-4 {
+  width: 25px;
+}
+.icon-5 {
+  width: 30px;
+}
+.one-1 {
+  color: blue;
+}
+.two-2 {
+  color: green;
+}
+.three-3 {
+  color: red;
+}
+/********** Main Style *****/
+#icon {
+  width: 10px;
+  height: 20px;
+}
+body {
+  background-color: #ef55f1;
+  font-family: 'arial';
+}

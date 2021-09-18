@@ -1,0 +1,32 @@
+/******* Extends ********/
+.inline {
+  color: red;
+}
+nav ul {
+  &:extend(.inline);
+  background: blue;
+}
+
+.calss-1{
+  padding: 20px;
+}
+
+.calss-2:extend(.calss-1, .inline){
+  background-color: green;
+}
+
+.bucket {
+  background-color: lightblue;
+  tr { // nested ruleset with target selector
+    color: blue;
+  }
+}
+
+// nested ruleset is recognized
+.some-class:extend(.bucket tr) {
+  margin-top: 20px;
+} 
+
+.extend-all:extend(.bucket all){
+  margin-bottom: 20px;
+}

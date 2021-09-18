@@ -1,0 +1,41 @@
+.navbar {
+  background-color: $primary;
+  height: $navbar-height;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      display: block;
+      line-height: $navbar-height;
+      white-space: nowrap;
+      padding: 0 1em;
+      background-color: $primary;
+      color: $light;
+    }
+
+    ul {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    li {
+      &:hover {
+        > a {
+          background-color: lighten($color: $primary, $amount: 10%);
+        }
+        > ul {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  > ul > li {
+    @if $rtl {
+      float: right;
+    } @else {
+      float: left;
+    }
+  }
+}
