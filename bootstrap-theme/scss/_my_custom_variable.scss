@@ -1,6 +1,6 @@
 $primary: rgb(255, 0, 242);
-$spacer: 2rem;
-
+$spacer: 20px;
+$enable-rounded:false;
 $spacers: (
       0: 0,
       1: ($spacer * .25),
@@ -14,4 +14,15 @@ $spacers: (
       9: ($spacer * 2.5),
       10: ($spacer * 2.75),
       11: ($spacer * 3) 
-    ),
+    );
+
+$body-bg: rgb(241, 190, 190);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$grid-columns: 15;
